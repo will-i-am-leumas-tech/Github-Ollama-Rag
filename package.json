@@ -1,0 +1,15 @@
+{
+  "name": "leumas-repo-rag",
+  "version": "1.0.0",
+  "description": "Lightweight GitHub repo RAG tool using Ollama locally",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node tests/smoke.test.js && node tests/parsing.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  }
+}
