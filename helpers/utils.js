@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { LOCAL_REPO_ROOT, LOCAL_INDEX_ROOT, CACHE_ROOT } = require('./config');
+const { LOCAL_REPO_ROOT, LOCAL_INDEX_ROOT, FUNCTION_INDEX_ARCHIVE_ROOT, CACHE_ROOT } = require('./config');
 
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -9,6 +9,7 @@ function ensureDir(dir) {
 function ensureBaseDirs() {
   ensureDir(LOCAL_REPO_ROOT);
   ensureDir(LOCAL_INDEX_ROOT);
+  ensureDir(FUNCTION_INDEX_ARCHIVE_ROOT);
   ensureDir(CACHE_ROOT);
 }
 

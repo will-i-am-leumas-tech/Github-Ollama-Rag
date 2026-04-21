@@ -5,6 +5,8 @@ const { getRepoMeta, getRepoTree, getFileContent } = require('./github');
 const { cloneRepo, getLocalRepoPath, repoExistsLocally } = require('./repoManager');
 const { createRepoIndex, readRepoIndex, answerRepoQuestion } = require('./rag');
 const { listModels } = require('./ollama');
+const { readFunctionIndex, summarizeFunctionIndex, indexRepoFunctions } = require('./functionIndex');
+const { walk } = require('./fileIndexer');
 
 function registerRoutes(app) {
   app.get('/api/ollama/models', async (req, res) => {
@@ -49,6 +51,25 @@ function registerRoutes(app) {
     }
   });
 
+  app.get('/api/repo/:owner/:repo/functions', async (req, res) => {
+    try {
+      const { owner, repo } = req.params;
+      res.json(summarizeFunctionIndex(readFunctionIndex(owner, repo)));
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/repo/:owner/:repo/functions/index', async (req, res) => {
+    try {
+      const { owner, repo } = req.params;
+      const result = await indexRepoFunctions(owner, repo);
+      res.json({ ok: true, ...result });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
   app.get('/api/repo/:owner/:repo/tree', async (req, res) => {
     try {
       const { owner, repo } = req.params;
@@ -56,7 +77,7 @@ function registerRoutes(app) {
       const index = readRepoIndex(owner, repo);
       
       if (fs.existsSync(repoPath)) {
-        return res.json({ tree: index?.tree || [], local: true });
+        return res.json({ tree: index?.tree || walk(repoPath), local: true });
       }
       
       // If not local, fetch from GitHub

@@ -3,7 +3,7 @@ const path = require('path');
 const { MAX_FILE_SIZE_BYTES, MAX_CHUNK_SIZE, CHUNK_OVERLAP } = require('./config');
 const { isTextLikeFile } = require('./utils');
 
-const SKIP_DIRS = new Set(['.git', 'node_modules', 'dist', 'build', '.next', '.cache', 'coverage']);
+const SKIP_DIRS = new Set(['.git', '.leumas', 'node_modules', 'dist', 'build', '.next', '.cache', 'coverage']);
 
 function walk(dir, base = dir, results = []) {
   const items = fs.readdirSync(dir, { withFileTypes: true });

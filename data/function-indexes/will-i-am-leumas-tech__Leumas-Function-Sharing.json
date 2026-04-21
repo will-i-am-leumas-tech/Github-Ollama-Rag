@@ -1,0 +1,4462 @@
+{
+  "project": {
+    "name": "leumas-function-mesh",
+    "version": "0.1.5",
+    "rootPath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+    "createdAt": "2026-04-21T02:33:55.976Z"
+  },
+  "summary": {
+    "totals": {
+      "total": 169,
+      "node_function": 0,
+      "python_function": 48,
+      "python_class": 2,
+      "cli_command": 22,
+      "express_route": 0,
+      "react_component": 0,
+      "react_hook": 2,
+      "sdk_entrypoint": 3,
+      "util": 92,
+      "unknown": 0,
+      "callable": 28
+    }
+  },
+  "entries": [
+    {
+      "id": "45f31f7141bbe3d4c901cbd3eb906d43efaa80a3",
+      "type": "cli_command",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/package.json",
+      "relativePath": "package.json",
+      "exportName": "npm:test",
+      "signature": "[...args]",
+      "language": "package_script",
+      "runtime": "npm_script",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Arguments passed to the npm script after --.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the script process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/package.json",
+        "command": "npm",
+        "args": [
+          "--prefix",
+          "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+          "run",
+          "test"
+        ],
+        "appendArgsSeparator": "--",
+        "callCommand": "npm --prefix data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing run test",
+        "usageCommand": "npm --prefix data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing run test -- [...args]",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "npm_script",
+        "packageScript": "test",
+        "scriptCommand": "node --test"
+      }
+    },
+    {
+      "id": "d2a44887ae54f42c6adf4c5cb76b3266414938d8",
+      "type": "cli_command",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/package.json",
+      "relativePath": "sdk/package.json",
+      "exportName": "npm:build",
+      "signature": "[...args]",
+      "language": "package_script",
+      "runtime": "npm_script",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Arguments passed to the npm script after --.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the script process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/package.json",
+        "command": "npm",
+        "args": [
+          "--prefix",
+          "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk",
+          "run",
+          "build"
+        ],
+        "appendArgsSeparator": "--",
+        "callCommand": "npm --prefix data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk run build",
+        "usageCommand": "npm --prefix data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk run build -- [...args]",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk",
+        "platform": "cross-platform",
+        "runtime": "npm_script",
+        "packageScript": "build",
+        "scriptCommand": "node scripts/build.js"
+      }
+    },
+    {
+      "id": "1f684c5d0171514c3efc4d96ad542653f6bfefc3",
+      "type": "cli_command",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/package.json",
+      "relativePath": "sdk/package.json",
+      "exportName": "npm:test",
+      "signature": "[...args]",
+      "language": "package_script",
+      "runtime": "npm_script",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Arguments passed to the npm script after --.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the script process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/package.json",
+        "command": "npm",
+        "args": [
+          "--prefix",
+          "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk",
+          "run",
+          "test"
+        ],
+        "appendArgsSeparator": "--",
+        "callCommand": "npm --prefix data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk run test",
+        "usageCommand": "npm --prefix data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk run test -- [...args]",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk",
+        "platform": "cross-platform",
+        "runtime": "npm_script",
+        "packageScript": "test",
+        "scriptCommand": "node --test ./tests/*.test.js"
+      }
+    },
+    {
+      "id": "94d89fc8390354624c9152447bf1ed96c74bca9e",
+      "type": "sdk_entrypoint",
+      "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/dist/index.js",
+      "relativePath": "sdk/dist/index.js",
+      "exportName": "leumas-function-mesh-sdk",
+      "signature": "module",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "module",
+          "description": "SDK module entrypoint exports."
+        }
+      },
+      "execution": {
+        "kind": "module",
+        "modulePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/dist/index.js",
+        "packageDir": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk",
+        "packageName": "leumas-function-mesh-sdk",
+        "entryFields": [
+          "main"
+        ]
+      }
+    },
+    {
+      "id": "6fad52a82b19f9db46ee678aa739db3000262955",
+      "type": "sdk_entrypoint",
+      "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "leumas-function-mesh-sdk",
+      "signature": "module",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "module",
+          "description": "SDK module entrypoint exports."
+        }
+      },
+      "execution": {
+        "kind": "module",
+        "modulePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+        "packageDir": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk",
+        "packageName": "leumas-function-mesh-sdk",
+        "entryFields": [
+          "default"
+        ]
+      }
+    },
+    {
+      "id": "1b4e2d617bf8480ad6eb28d09d1b8e3f66910758",
+      "type": "sdk_entrypoint",
+      "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "leumas-function-mesh",
+      "signature": "module",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "module",
+          "description": "SDK module entrypoint exports."
+        }
+      },
+      "execution": {
+        "kind": "module",
+        "modulePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+        "packageDir": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "packageName": "leumas-function-mesh",
+        "entryFields": [
+          "main",
+          "default"
+        ]
+      }
+    },
+    {
+      "id": "1f8d61341c17f50db2fa5ed4e648d7a0c462631d",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/.gitignore",
+      "relativePath": ".gitignore",
+      "type": "cli_command",
+      "exportName": ".gitignore",
+      "signature": "[...args]",
+      "language": "unknown",
+      "runtime": "executable",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/.gitignore",
+        "command": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/.gitignore",
+        "args": [],
+        "callCommand": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/.gitignore",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "executable",
+        "executable": true
+      }
+    },
+    {
+      "id": "5c109602d46444f90b11387983fbb64fdc4a1bf7",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "type": "cli_command",
+      "exportName": "cli.js",
+      "signature": "[...args]",
+      "language": "javascript",
+      "runtime": "node_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Arguments read from process.argv."
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+        "command": "node",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js"
+        ],
+        "callCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "node_cli",
+        "executable": true,
+        "parameters": [
+          {
+            "name": "args",
+            "kind": "argument",
+            "required": false,
+            "type": "array",
+            "description": "Arguments read from process.argv."
+          }
+        ],
+        "usageCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js [<args>]",
+        "detectedAs": "shebang",
+        "shebang": "/usr/bin/env node"
+      }
+    },
+    {
+      "id": "483cee54e9b3f73363a14bd5c22f5b31187aac0b",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "findMeshIndexFiles",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "bed69a12ea0b7a05e20064a18d6daad546efff14",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "loadMeshIndexes",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "22d8b1746bb42843dfd10f245d576583e3a4a000",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "getCallableEntries",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "8c147bf38a6684d9ca1481d33ebb7ae3daede69b",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "parseInputValue",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "45403a0ead3b38cd5944eb36940091ab0d6eb837",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "parseArgsJson",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "b6828878b79c5fc0e847d6bd81907538664f1670",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "splitArgs",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "5b1ffd65bafee8ebb57f6cf49acde015d2776902",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "splitPathList",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "1574dea42b96035f64d599fba9f632af74333cc8",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "getCurrentDriveRoot",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "12412fdc13bf6dc87827981ca7d3dde3dc8bd59b",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "formatEntryLabel",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "88f1a405b576360650beebd9fe598fcfab3f45b9",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/cli.js",
+      "relativePath": "cli.js",
+      "exportName": "main",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "0ba0eaeb74f3a8803b725e92a089ef82c0ba106d",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/functionIndexer2.js",
+      "relativePath": "functionIndexer2.js",
+      "type": "cli_command",
+      "exportName": "functionIndexer2.js",
+      "signature": "[...args]",
+      "language": "javascript",
+      "runtime": "node_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Arguments read from process.argv."
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/functionIndexer2.js",
+        "command": "node",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/functionIndexer2.js"
+        ],
+        "callCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/functionIndexer2.js",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "node_cli",
+        "executable": true,
+        "parameters": [
+          {
+            "name": "args",
+            "kind": "argument",
+            "required": false,
+            "type": "array",
+            "description": "Arguments read from process.argv."
+          }
+        ],
+        "usageCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/functionIndexer2.js [<args>]",
+        "detectedAs": "process_argv"
+      }
+    },
+    {
+      "id": "9be009eadeb6c9cf6c325ad2ce475c704895fb60",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/functionIndexer2.js",
+      "relativePath": "functionIndexer2.js",
+      "exportName": "indexFunctionsInDir",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "25d1c6f84a11d26fe4aaa08541cb3989d2df7b12",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "indexProject",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "8429e9621e75550da3f79e982091ea54b5e30aa9",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "bulkIndexProjects",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "fdbca7f203fbe616295ef052195f05d703569c07",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "remoteIndexGitRepo",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "30865f1f1a8f9ed53705fa0d787da1002b2f98f6",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "bulkRemoteIndexGitRepos",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "ac7e8dba7b3a7d990752497165695cd340f7974d",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "discoverIndexes",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "e7276e94e05d231cd0cfbc35afcaddf5eb8e12b0",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "listMeshEntries",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "1dd905a2fd2cb885a8954df7596f4f87e77b7a10",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "runMeshEntry",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "eca3db69c2eed3104cedb2533b273a3b0dadeadb",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "runNodeFunction",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "6527a1ce04bbb0cfbb4e9f6391db593ec9a57bc8",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "createMeshComponent",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "a67af246dc8cf1c5384670c682d891d61745d748",
+      "type": "react_hook",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+      "relativePath": "src/index.js",
+      "exportName": "useMeshRegistry",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "browser",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "module",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/index.js",
+        "exportName": "useMeshRegistry"
+      }
+    },
+    {
+      "id": "4d1cd4e9b1b8591901ec7842bd4b92c714e142ec",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/shared/hashId.js",
+      "relativePath": "src/shared/hashId.js",
+      "exportName": "hashId",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "ff1274d2a8a96a3e99b450495278ef6616365b37",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/shared/runtimePaths.js",
+      "relativePath": "src/shared/runtimePaths.js",
+      "exportName": "normalizeRuntimePath",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "d08b5a7bc9bb67b836b14e66eb644a487d8e4c23",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/shared/runtimePaths.js",
+      "relativePath": "src/shared/runtimePaths.js",
+      "exportName": "normalizeRuntimeArgs",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "865ea5fa4722dbf5b8e16302f50cacbef9f1a86a",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/shared/runtimePaths.js",
+      "relativePath": "src/shared/runtimePaths.js",
+      "exportName": "normalizeEntryForRuntime",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "d93806112ee5a17bbbfe9420e79a358b453d8f54",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/shared/runtimePaths.js",
+      "relativePath": "src/shared/runtimePaths.js",
+      "exportName": "getRuntimePathCandidates",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "2d302b73807f2db337cd5cfefe16792cfc1ee9ec",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/shared/runtimePaths.js",
+      "relativePath": "src/shared/runtimePaths.js",
+      "exportName": "toWindowsDrivePath",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "fb3ea59c9094e342296d8da4607c81a59704da08",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/shared/runtimePaths.js",
+      "relativePath": "src/shared/runtimePaths.js",
+      "exportName": "toWslDrivePath",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "40ff7e7c8f05a13067db13cc0e13b59cb200bba9",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/react/createMeshComponent.js",
+      "relativePath": "src/react/createMeshComponent.js",
+      "exportName": "createMeshComponent",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "9d4783189b2b0c74056ccaee79df4fd37db75c2e",
+      "type": "react_hook",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/react/useMeshRegistry.js",
+      "relativePath": "src/react/useMeshRegistry.js",
+      "exportName": "useMeshRegistry",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "browser",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "module",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/react/useMeshRegistry.js",
+        "exportName": "useMeshRegistry"
+      }
+    },
+    {
+      "id": "20fa209b84b07a7565f66e7cd5fa7e77cbcc9196",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/bulkIndexProjects.js",
+      "relativePath": "src/indexer/bulkIndexProjects.js",
+      "exportName": "bulkIndexProjects",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "e42fa99b63ea8a1bb716c32634f50071cb4d09b8",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectExports.js",
+      "relativePath": "src/indexer/detectExports.js",
+      "exportName": "_seen",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "8157965b2942eda2f6e80960da457e5decb21a47",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectExports.js",
+      "relativePath": "src/indexer/detectExports.js",
+      "exportName": "items",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "4e61459e4f2c8ef422a41844a1a77fa9616f2d9c",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectExports.js",
+      "relativePath": "src/indexer/detectExports.js",
+      "exportName": "detectExports",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "6b9cc9fe171c2980d5bfff35560612d9df08bdb5",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectPythonExports.js",
+      "relativePath": "src/indexer/detectPythonExports.js",
+      "exportName": "detectPythonExports",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "049d7f78aea321740d237fd62e7e800f3bb70d93",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectReact.js",
+      "relativePath": "src/indexer/detectReact.js",
+      "exportName": "detectReactType",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "e5c7dd15f0711bdd5b5a913c7b0e8a1af48e2d4b",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectReact.js",
+      "relativePath": "src/indexer/detectReact.js",
+      "exportName": "isPascalCase",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "7c2cf6ba4d5806b68103823f86e69f42e3f5ee7d",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectReact.js",
+      "relativePath": "src/indexer/detectReact.js",
+      "exportName": "isHookName",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "47b0757b6361a97e19b8ae3f9b2218022d267390",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectRunnable.js",
+      "relativePath": "src/indexer/detectRunnable.js",
+      "type": "cli_command",
+      "exportName": "detectRunnable.js",
+      "signature": "[...args]",
+      "language": "javascript",
+      "runtime": "node_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectRunnable.js",
+        "command": "node",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectRunnable.js"
+        ],
+        "callCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectRunnable.js",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "node_cli",
+        "executable": true,
+        "detectedAs": "process_argv"
+      }
+    },
+    {
+      "id": "f5b514bcc88e191ab6243aa0ef65e2f06e9b0116",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/detectRunnable.js",
+      "relativePath": "src/indexer/detectRunnable.js",
+      "exportName": "detectRunnable",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "f4081fed27bd94e43342094a82e17ee310a4a2db",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/indexProject.js",
+      "relativePath": "src/indexer/indexProject.js",
+      "exportName": "json",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "b8f708f92df028502f8f1757a94723a7ab37dcc4",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/indexProject.js",
+      "relativePath": "src/indexer/indexProject.js",
+      "exportName": "indexProject",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "8da8b0fc740a8dea63dbf37d107ff3bdc6bfab3b",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "type": "cli_command",
+      "exportName": "pythonAstProbe.py",
+      "signature": "[...args]",
+      "language": "python",
+      "runtime": "python_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "command": "python3",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py"
+        ],
+        "callCommand": "python3 /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "python_cli",
+        "executable": true,
+        "detectedAs": "python_main_guard"
+      }
+    },
+    {
+      "id": "7974fce679fa84f932bef633dacb737f7c2a2652",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "node_name",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "node_name"
+      }
+    },
+    {
+      "id": "9264446c89cbd0e20c6290bc1a402b4b9168261f",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "normalize_type_name",
+      "signature": "(raw)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "raw",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "normalize_type_name"
+      }
+    },
+    {
+      "id": "973918e1cd7fd056249c9d630f1a950bec2a2f1b",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "merge_union",
+      "signature": "(contracts)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "contracts",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "merge_union"
+      }
+    },
+    {
+      "id": "c745053cf4933aa7ad772b28d67601642f68c33b",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "get_slice_parts",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "get_slice_parts"
+      }
+    },
+    {
+      "id": "2d95b846d70b1c0287323161e51e86dc726d0233",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "contract_from_annotation",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "contract_from_annotation"
+      }
+    },
+    {
+      "id": "7723a93fbe48e8137d247731725b4faabfc99d1c",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "contract_from_default",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "contract_from_default"
+      }
+    },
+    {
+      "id": "f2cde13a1bff40a7bd7ab646e2606d7c587d0b21",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "apply_default_type",
+      "signature": "(annotation_contract, default_node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "annotation_contract",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          },
+          {
+            "name": "default_node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "apply_default_type"
+      }
+    },
+    {
+      "id": "d39ce7dc3bdf6bfd1c9f7226c76a8e7cab9ca48a",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "parse_doc_contracts",
+      "signature": "(docstring)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "docstring",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "parse_doc_contracts"
+      }
+    },
+    {
+      "id": "30bb7cb45616e7f956e1318485bf6b7606a43e12",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "build_params",
+      "signature": "(fn_node, doc_param_contracts)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "fn_node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          },
+          {
+            "name": "doc_param_contracts",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "build_params"
+      }
+    },
+    {
+      "id": "4c8c19fd39ceaf6140ad8ee14eaaf4ba57c321fe",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "get_function_entry",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "get_function_entry"
+      }
+    },
+    {
+      "id": "47e395e69387fe39fa50dc8a0befb4f9193eed56",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "get_class_entry",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "get_class_entry"
+      }
+    },
+    {
+      "id": "c6367b6e0f0ff3624c1c8e6162dec4a4431a9d1c",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+      "relativePath": "src/indexer/pythonAstProbe.py",
+      "exportName": "main",
+      "signature": "",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "main"
+      }
+    },
+    {
+      "id": "d4f29f2b2cf7f28d5a899b1ce291fe5bdd3e9a91",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/remoteIndexGitRepos.js",
+      "relativePath": "src/indexer/remoteIndexGitRepos.js",
+      "exportName": "remoteIndexGitRepo",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "4b8d125d5d03c97e070e098e724d6be2f80090e5",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/remoteIndexGitRepos.js",
+      "relativePath": "src/indexer/remoteIndexGitRepos.js",
+      "exportName": "bulkRemoteIndexGitRepos",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "4eaa6e18f860b705848baa4fa88c55a20ad3829f",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/remoteIndexGitRepos.js",
+      "relativePath": "src/indexer/remoteIndexGitRepos.js",
+      "exportName": "getRepoSlug",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "76b381fbee60d37cd20f196c9d7b7f022d45d664",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/writeIndex.js",
+      "relativePath": "src/indexer/writeIndex.js",
+      "exportName": "writeIndex",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "49002c5606ecb805d960ddc2b2d571a3e708cb33",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/indexer/writeIndex.js",
+      "relativePath": "src/indexer/writeIndex.js",
+      "exportName": "groupEntriesByExecutionKind",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "fc668a33228e770f2f2150b734f4d2e3811da05f",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runMeshEntry.js",
+      "relativePath": "src/exec/runMeshEntry.js",
+      "exportName": "json",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "8afd66ecc7480e9c6853dd97f245a9bf78b12f42",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runMeshEntry.js",
+      "relativePath": "src/exec/runMeshEntry.js",
+      "exportName": "runMeshEntry",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "9c5c3d0f63cd6d991f722bf9b2b65dd3f5d1c2c7",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runMeshEntry.js",
+      "relativePath": "src/exec/runMeshEntry.js",
+      "exportName": "resolveEntry",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "edf5e45befa4f930d96abb854b7ebfb3b5e68b04",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runNodeFunction.js",
+      "relativePath": "src/exec/runNodeFunction.js",
+      "exportName": "runNodeFunction",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "0f92d040fbdf0017b2fbaeb0ad62ae25f1b1795d",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+      "relativePath": "src/exec/runner/pythonRunner.py",
+      "type": "cli_command",
+      "exportName": "pythonRunner.py",
+      "signature": "[...args]",
+      "language": "python",
+      "runtime": "python_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+        "command": "python3",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py"
+        ],
+        "callCommand": "python3 /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "python_cli",
+        "executable": true,
+        "detectedAs": "python_main_guard"
+      }
+    },
+    {
+      "id": "920ce8be7ae39fc786e297d7c0f0be4a917ae930",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+      "relativePath": "src/exec/runner/pythonRunner.py",
+      "exportName": "emit",
+      "signature": "(payload)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "payload",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "emit"
+      }
+    },
+    {
+      "id": "997c158b8b33e70222639bc6e3bf37cfae6a3a51",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+      "relativePath": "src/exec/runner/pythonRunner.py",
+      "exportName": "module_name_from_payload",
+      "signature": "(payload)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "payload",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "module_name_from_payload"
+      }
+    },
+    {
+      "id": "dfcef7a1ed506eb37533f3e502b1a3ba05c9306e",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+      "relativePath": "src/exec/runner/pythonRunner.py",
+      "exportName": "import_module",
+      "signature": "(payload)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "payload",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "import_module"
+      }
+    },
+    {
+      "id": "c37eb5c3994208a2935adbf4da9cbab84a576501",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+      "relativePath": "src/exec/runner/pythonRunner.py",
+      "exportName": "to_jsonable",
+      "signature": "(value)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "value",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "to_jsonable"
+      }
+    },
+    {
+      "id": "2a8b87eb077a5317bfbfc64d4f3bc0d105443305",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+      "relativePath": "src/exec/runner/pythonRunner.py",
+      "exportName": "maybe_await",
+      "signature": "(value)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "value",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "maybe_await"
+      }
+    },
+    {
+      "id": "953fb78f46cb703d79ec145675fd3308118486c2",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+      "relativePath": "src/exec/runner/pythonRunner.py",
+      "exportName": "run",
+      "signature": "(payload)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "payload",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "run"
+      }
+    },
+    {
+      "id": "308fc31e3197f69672e4e0f54e3ab29b03c71fe4",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+      "relativePath": "src/exec/runner/pythonRunner.py",
+      "exportName": "main",
+      "signature": "",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "main"
+      }
+    },
+    {
+      "id": "6915544654cab39c32750f5a0c609a9f8c9f17f9",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/runner.js",
+      "relativePath": "src/exec/runner/runner.js",
+      "type": "cli_command",
+      "exportName": "runner.js",
+      "signature": "[...args]",
+      "language": "javascript",
+      "runtime": "node_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/runner.js",
+        "command": "node",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/runner.js"
+        ],
+        "callCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/exec/runner/runner.js",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "node_cli",
+        "executable": true,
+        "detectedAs": "process_argv"
+      }
+    },
+    {
+      "id": "26a49603fe59a329450644fb9a7c27daa44ecc47",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/discovery/cache.js",
+      "relativePath": "src/discovery/cache.js",
+      "exportName": "writeCache",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "2c4dc5a2de16415b82339d550a66aef16f3c3739",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/discovery/cache.js",
+      "relativePath": "src/discovery/cache.js",
+      "exportName": "readCache",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "a06b45ca7640540cbe6814eecf3729ccd38dda23",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/discovery/cache.js",
+      "relativePath": "src/discovery/cache.js",
+      "exportName": "listMeshEntries",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "e35b1b88ff5b92048f29afc9c28333a1801884ae",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/discovery/discoverIndexes.js",
+      "relativePath": "src/discovery/discoverIndexes.js",
+      "exportName": "discoverIndexes",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "26278373ff9d4d6c8b2874f49cb26aadbda3cb32",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/config/loadConfig.js",
+      "relativePath": "src/config/loadConfig.js",
+      "exportName": "loadConfig",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "9449d64c655d45739c110b9ed5fc97d265a7a5b5",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/config/paths.js",
+      "relativePath": "src/config/paths.js",
+      "exportName": "getConfigDir",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "12be3360a0c8ad96091cbae0579c718e0dd5a23a",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/config/paths.js",
+      "relativePath": "src/config/paths.js",
+      "exportName": "getConfigPath",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "f6732a5132bcb1dce56b441ea6e77cd6204684ef",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/src/config/paths.js",
+      "relativePath": "src/config/paths.js",
+      "exportName": "getCachePath",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "df75476bcc4e4c842dd66700731053919085ce35",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/tests/sdk.test.js",
+      "relativePath": "sdk/tests/sdk.test.js",
+      "type": "cli_command",
+      "exportName": "sdk.test.js",
+      "signature": "[...args]",
+      "language": "javascript",
+      "runtime": "node_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/tests/sdk.test.js",
+        "command": "node",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/tests/sdk.test.js"
+        ],
+        "callCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/tests/sdk.test.js",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "node_cli",
+        "executable": true,
+        "detectedAs": "process_argv"
+      }
+    },
+    {
+      "id": "df978593c827fe5a9838c32cbb4ed3c5ac5c3508",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "createIndex",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "157fca25ed0e35512331a402a2712aad07252173",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "bulkCreateIndexes",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "b7bb277f351b77ae5b2eaece41ef1fb810c38d67",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "remoteCreateIndex",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "f7e947c37885de03c442675c2792451e3a63d986",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "bulkRemoteCreateIndexes",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "ef55b0bab704b45a632338bd8543f7ef2ae2612b",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "findAllIndex",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "11c490ffb3c13db5ba94ef70dc1093a804a365f9",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "callFunctionInIndex",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "e55d682e11984630ec97947c6ad4106bd2c89ff7",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "runMeshEntry",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "0fd080f5214baa4ff9b2c8ff39c0562221c94f2c",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "indexStats",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "872f6dfdc43f5beb841722b92090fc25eda2595b",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/index.js",
+      "relativePath": "sdk/src/index.js",
+      "exportName": "bulkIndexStatus",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "8e63d9c4b2e26de4d48b19564275231e0cc89d44",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/discovery.js",
+      "relativePath": "sdk/src/internal/discovery.js",
+      "exportName": "findAllIndexes",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "bc940c84dec548b765d329e5855a104318435ea4",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/shared/hashId.js",
+      "relativePath": "sdk/src/internal/shared/hashId.js",
+      "exportName": "hashId",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "0c87a33a70e767899879e87ba4868304d2ed2277",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/shared/runtimePaths.js",
+      "relativePath": "sdk/src/internal/shared/runtimePaths.js",
+      "exportName": "normalizeRuntimePath",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "fb15c57086db98c900c99a678f59494704fb5b21",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/shared/runtimePaths.js",
+      "relativePath": "sdk/src/internal/shared/runtimePaths.js",
+      "exportName": "normalizeRuntimeArgs",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "17bec48a671ab429dea18293c1cf4bb70fc8287e",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/shared/runtimePaths.js",
+      "relativePath": "sdk/src/internal/shared/runtimePaths.js",
+      "exportName": "normalizeEntryForRuntime",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "9544aab2b1eb4f894b16ec47642f922f5790b779",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/shared/runtimePaths.js",
+      "relativePath": "sdk/src/internal/shared/runtimePaths.js",
+      "exportName": "getRuntimePathCandidates",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "73f8b7ca09994f59246d167b930f425791d0ec6a",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/shared/runtimePaths.js",
+      "relativePath": "sdk/src/internal/shared/runtimePaths.js",
+      "exportName": "toWindowsDrivePath",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "f6bb6bd0f701f42656273cc6fefc7ec4cb10ec6c",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/shared/runtimePaths.js",
+      "relativePath": "sdk/src/internal/shared/runtimePaths.js",
+      "exportName": "toWslDrivePath",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "4e82b492a5b2e15ad830d967b817e3638e779b15",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectExports.js",
+      "relativePath": "sdk/src/internal/indexer/detectExports.js",
+      "exportName": "_seen",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "c8e159df3d873f998d4ccd803517a44131bcf177",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectExports.js",
+      "relativePath": "sdk/src/internal/indexer/detectExports.js",
+      "exportName": "items",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "f2baa14f9081d2a68c40d4be55cd080ac6c289d2",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectExports.js",
+      "relativePath": "sdk/src/internal/indexer/detectExports.js",
+      "exportName": "detectExports",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "7a2435813a66cc91ebca6a042ff11989fc4e4bda",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectPythonExports.js",
+      "relativePath": "sdk/src/internal/indexer/detectPythonExports.js",
+      "exportName": "detectPythonExports",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "c37018abf59bab0683c269d3ac557e5ef2b31b57",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectReact.js",
+      "relativePath": "sdk/src/internal/indexer/detectReact.js",
+      "exportName": "detectReactType",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "12e03a4293ee7ab5423758161041c022d287aaed",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectReact.js",
+      "relativePath": "sdk/src/internal/indexer/detectReact.js",
+      "exportName": "isPascalCase",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "4892ec3990c030f2e48a1a2a7759aa42685f26af",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectReact.js",
+      "relativePath": "sdk/src/internal/indexer/detectReact.js",
+      "exportName": "isHookName",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "208d457c94fd0439c37f9302bc42a97d3203f909",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectRunnable.js",
+      "relativePath": "sdk/src/internal/indexer/detectRunnable.js",
+      "type": "cli_command",
+      "exportName": "detectRunnable.js",
+      "signature": "[...args]",
+      "language": "javascript",
+      "runtime": "node_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectRunnable.js",
+        "command": "node",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectRunnable.js"
+        ],
+        "callCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectRunnable.js",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "node_cli",
+        "executable": true,
+        "detectedAs": "process_argv"
+      }
+    },
+    {
+      "id": "0bd41d12ba5378688fdbcd5e40e3bf35f78a1d99",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/detectRunnable.js",
+      "relativePath": "sdk/src/internal/indexer/detectRunnable.js",
+      "exportName": "detectRunnable",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "a990bcd0503c260563a435a18ea41b5b7d235f57",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/indexProject.js",
+      "relativePath": "sdk/src/internal/indexer/indexProject.js",
+      "exportName": "json",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "1748a29b40a77aec2d5172cdddfe8488e54c9c92",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/indexProject.js",
+      "relativePath": "sdk/src/internal/indexer/indexProject.js",
+      "exportName": "indexProject",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "320479b222a8c414128f10324a4291abb4a2ac1d",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "type": "cli_command",
+      "exportName": "pythonAstProbe.py",
+      "signature": "[...args]",
+      "language": "python",
+      "runtime": "python_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "command": "python3",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py"
+        ],
+        "callCommand": "python3 /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "python_cli",
+        "executable": true,
+        "detectedAs": "python_main_guard"
+      }
+    },
+    {
+      "id": "cfc0c946dced7181f3f67ad46ec741e387339ddf",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "node_name",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "node_name"
+      }
+    },
+    {
+      "id": "16ae915665d729ab52c579a712bacae8998474d7",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "normalize_type_name",
+      "signature": "(raw)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "raw",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "normalize_type_name"
+      }
+    },
+    {
+      "id": "02dd3082f03a3c41c360620901c3b864f52a236b",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "merge_union",
+      "signature": "(contracts)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "contracts",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "merge_union"
+      }
+    },
+    {
+      "id": "3e01364c4c505b424036137fed7742abdde802cd",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "get_slice_parts",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "get_slice_parts"
+      }
+    },
+    {
+      "id": "c674af1d5bba139ebbca6837f5f93e13e091d2e2",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "contract_from_annotation",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "contract_from_annotation"
+      }
+    },
+    {
+      "id": "aa618e2e9932423043b6e873abf2f4e621d4287b",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "contract_from_default",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "contract_from_default"
+      }
+    },
+    {
+      "id": "15e95aee2c0164b44dd44dfeca4f281d3f81f0a6",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "apply_default_type",
+      "signature": "(annotation_contract, default_node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "annotation_contract",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          },
+          {
+            "name": "default_node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "apply_default_type"
+      }
+    },
+    {
+      "id": "b77237988f75ce428a022a8d4f9b091092f84b23",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "parse_doc_contracts",
+      "signature": "(docstring)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "docstring",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "parse_doc_contracts"
+      }
+    },
+    {
+      "id": "f402736dea0866371b63625a8298393d72b37cdc",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "build_params",
+      "signature": "(fn_node, doc_param_contracts)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "fn_node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          },
+          {
+            "name": "doc_param_contracts",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "build_params"
+      }
+    },
+    {
+      "id": "7b4c85c783cf2ee8462b62b93d1ff5554967bf52",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "get_function_entry",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "get_function_entry"
+      }
+    },
+    {
+      "id": "4dbe8c87de153fa6cf102d4fbb674906a280dc20",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "get_class_entry",
+      "signature": "(node)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "node",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "get_class_entry"
+      }
+    },
+    {
+      "id": "d3a3445936796b7511af462f2766affd163ef3a8",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+      "relativePath": "sdk/src/internal/indexer/pythonAstProbe.py",
+      "exportName": "main",
+      "signature": "",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/pythonAstProbe.py",
+        "moduleName": "pythonAstProbe",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "main"
+      }
+    },
+    {
+      "id": "ecf43fa91d0e5fe7664c463050659bf123ee4c8c",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/remoteIndexGitRepos.js",
+      "relativePath": "sdk/src/internal/indexer/remoteIndexGitRepos.js",
+      "exportName": "remoteIndexGitRepo",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "443ba3e396d7bac0552b1c84afa1d344c90cb86f",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/remoteIndexGitRepos.js",
+      "relativePath": "sdk/src/internal/indexer/remoteIndexGitRepos.js",
+      "exportName": "bulkRemoteIndexGitRepos",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "7857a64848c92fd4eb86f5330b2b0112580cfce5",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/remoteIndexGitRepos.js",
+      "relativePath": "sdk/src/internal/indexer/remoteIndexGitRepos.js",
+      "exportName": "getRepoSlug",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "52031a64020881a35fd78303252b3f333b554594",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/writeIndex.js",
+      "relativePath": "sdk/src/internal/indexer/writeIndex.js",
+      "exportName": "writeIndex",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "6673806f8ee3912f5a1393f74a17a2cede939df9",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/indexer/writeIndex.js",
+      "relativePath": "sdk/src/internal/indexer/writeIndex.js",
+      "exportName": "groupEntriesByExecutionKind",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "0e1bf597c7b5769880ec397806305bc6d1f86033",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runMeshEntry.js",
+      "relativePath": "sdk/src/internal/exec/runMeshEntry.js",
+      "exportName": "json",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "344857bc16d0c8d89427c845de1401b7dfd97a12",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runMeshEntry.js",
+      "relativePath": "sdk/src/internal/exec/runMeshEntry.js",
+      "exportName": "runMeshEntry",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "c8014f8596e750a8584038ce8e85cea69763fa7c",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runMeshEntry.js",
+      "relativePath": "sdk/src/internal/exec/runMeshEntry.js",
+      "exportName": "resolveEntry",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "9f5f84ac03d3af0b0639c9bd519381f2538833f4",
+      "type": "util",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runNodeFunction.js",
+      "relativePath": "sdk/src/internal/exec/runNodeFunction.js",
+      "exportName": "runNodeFunction",
+      "signature": "",
+      "language": "javascript",
+      "runtime": "node",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "0c01b84161678b0f6c9e62beb4094c35b866e233",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+      "relativePath": "sdk/src/internal/exec/runner/pythonRunner.py",
+      "type": "cli_command",
+      "exportName": "pythonRunner.py",
+      "signature": "[...args]",
+      "language": "python",
+      "runtime": "python_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+        "command": "python3",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py"
+        ],
+        "callCommand": "python3 /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "python_cli",
+        "executable": true,
+        "detectedAs": "python_main_guard"
+      }
+    },
+    {
+      "id": "1379cc2a70a6f400f12dd8617f525a995a0f9399",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+      "relativePath": "sdk/src/internal/exec/runner/pythonRunner.py",
+      "exportName": "emit",
+      "signature": "(payload)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "payload",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "emit"
+      }
+    },
+    {
+      "id": "dce593d3ac83872040bcaa0fb74be5549718a483",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+      "relativePath": "sdk/src/internal/exec/runner/pythonRunner.py",
+      "exportName": "module_name_from_payload",
+      "signature": "(payload)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "payload",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "module_name_from_payload"
+      }
+    },
+    {
+      "id": "4cac3bcb6da3c57d96df250cb90d5aa62991b97f",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+      "relativePath": "sdk/src/internal/exec/runner/pythonRunner.py",
+      "exportName": "import_module",
+      "signature": "(payload)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "payload",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "import_module"
+      }
+    },
+    {
+      "id": "c773cfe76fe49011ddaa49b059bf54f1b87b1015",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+      "relativePath": "sdk/src/internal/exec/runner/pythonRunner.py",
+      "exportName": "to_jsonable",
+      "signature": "(value)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "value",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "to_jsonable"
+      }
+    },
+    {
+      "id": "5afa21a039fc6748165114b36ff883ebc8701691",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+      "relativePath": "sdk/src/internal/exec/runner/pythonRunner.py",
+      "exportName": "maybe_await",
+      "signature": "(value)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "value",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "maybe_await"
+      }
+    },
+    {
+      "id": "a2e5753e56b87986df65fcf1625bb3355200ceed",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+      "relativePath": "sdk/src/internal/exec/runner/pythonRunner.py",
+      "exportName": "run",
+      "signature": "(payload)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "payload",
+            "type": "unknown",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "run"
+      }
+    },
+    {
+      "id": "71e7a1d312938b3e92c522ba48ea7e260ea78dd7",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+      "relativePath": "sdk/src/internal/exec/runner/pythonRunner.py",
+      "exportName": "main",
+      "signature": "",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/pythonRunner.py",
+        "moduleName": "pythonRunner",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "main"
+      }
+    },
+    {
+      "id": "8360e1fc9905d90af5d9802a50806e6a2f8d9e52",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/runner.js",
+      "relativePath": "sdk/src/internal/exec/runner/runner.js",
+      "type": "cli_command",
+      "exportName": "runner.js",
+      "signature": "[...args]",
+      "language": "javascript",
+      "runtime": "node_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/runner.js",
+        "command": "node",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/runner.js"
+        ],
+        "callCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/sdk/src/internal/exec/runner/runner.js",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "node_cli",
+        "executable": true,
+        "detectedAs": "process_argv"
+      }
+    },
+    {
+      "id": "c07e62a4cb455b0e76ec145adb38b13b4ab2206f",
+      "type": "python_class",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-package/src/workflows/pipeline.py",
+      "relativePath": "demo-python-package/src/workflows/pipeline.py",
+      "exportName": "WorkflowReport",
+      "signature": "",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "4862993eb7285f2623098ec001fa90ad4763f0fb",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-package/src/workflows/pipeline.py",
+      "relativePath": "demo-python-package/src/workflows/pipeline.py",
+      "exportName": "transform_record",
+      "signature": "(record, include_score)",
+      "language": "python",
+      "runtime": "python",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "record",
+            "type": "object",
+            "required": true,
+            "description": ""
+          },
+          {
+            "name": "include_score",
+            "type": "boolean",
+            "required": false,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "object",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-package/src/workflows/pipeline.py",
+        "moduleName": "workflows.pipeline",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "transform_record"
+      }
+    },
+    {
+      "id": "a3b1d8479e0afa6c01fb367bcdd22a34b3da9517",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-package/src/workflows/pipeline.py",
+      "relativePath": "demo-python-package/src/workflows/pipeline.py",
+      "exportName": "summarize_batch",
+      "signature": "(records)",
+      "language": "python",
+      "runtime": "python",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "records",
+            "type": "array",
+            "required": true,
+            "description": "",
+            "items": {
+              "type": "object"
+            }
+          }
+        ],
+        "output": {
+          "type": "object",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-package/src/workflows/pipeline.py",
+        "moduleName": "workflows.pipeline",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "summarize_batch"
+      }
+    },
+    {
+      "id": "55f9abadcea4fae7f0a99d829db5e09525f81ccf",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-package/src/workflows/rules.py",
+      "relativePath": "demo-python-package/src/workflows/rules.py",
+      "exportName": "clean_label",
+      "signature": "(value)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "value",
+            "type": "string",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-package/src/workflows/rules.py",
+        "moduleName": "workflows.rules",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "clean_label"
+      }
+    },
+    {
+      "id": "bb6b321e81c3a8b610f612ff57e655fe884e8840",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-package/src/workflows/rules.py",
+      "relativePath": "demo-python-package/src/workflows/rules.py",
+      "exportName": "score_record",
+      "signature": "(record)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "record",
+            "type": "object",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "number",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-package/src/workflows/rules.py",
+        "moduleName": "workflows.rules",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "score_record"
+      }
+    },
+    {
+      "id": "b333028f8af104fb8905da98e4fdd59e9988516a",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/bin/data-tool.exe",
+      "relativePath": "demo-python-data-app/bin/data-tool.exe",
+      "type": "cli_command",
+      "exportName": "data-tool.exe",
+      "signature": "[...args]",
+      "language": "binary",
+      "runtime": "binary",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/bin/data-tool.exe",
+        "command": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/bin/data-tool.exe",
+        "args": [],
+        "callCommand": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/bin/data-tool.exe",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "win32",
+        "runtime": "binary",
+        "executable": true
+      }
+    },
+    {
+      "id": "38d4160c9b2ab3920c82086f696c8132a40e29aa",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/processors.py",
+      "relativePath": "demo-python-data-app/app/processors.py",
+      "exportName": "parse_sales_csv",
+      "signature": "(csv_text)",
+      "language": "python",
+      "runtime": "python",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "csv_text",
+            "type": "string",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/processors.py",
+        "moduleName": "processors",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "parse_sales_csv"
+      }
+    },
+    {
+      "id": "eb8159a27a163d1b6691d343ebd6d71bb9c4b710",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/processors.py",
+      "relativePath": "demo-python-data-app/app/processors.py",
+      "exportName": "summarize_sales",
+      "signature": "(rows)",
+      "language": "python",
+      "runtime": "python",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "rows",
+            "type": "array",
+            "required": true,
+            "description": "",
+            "items": {
+              "type": "object"
+            }
+          }
+        ],
+        "output": {
+          "type": "object",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/processors.py",
+        "moduleName": "processors",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "summarize_sales"
+      }
+    },
+    {
+      "id": "08223eb6049da9fbd58adf76c228c1721c85506c",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/server.py",
+      "relativePath": "demo-python-data-app/app/server.py",
+      "type": "cli_command",
+      "exportName": "server.py",
+      "signature": "[...args]",
+      "language": "python",
+      "runtime": "python_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/server.py",
+        "command": "python3",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/server.py"
+        ],
+        "callCommand": "python3 /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/server.py",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "python_cli",
+        "executable": true,
+        "detectedAs": "python_main_guard"
+      }
+    },
+    {
+      "id": "b6e8da9333d40c1d32d757021cbefb34c961f962",
+      "type": "python_class",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/server.py",
+      "relativePath": "demo-python-data-app/app/server.py",
+      "exportName": "Handler",
+      "signature": "",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "unknown",
+          "description": ""
+        }
+      },
+      "execution": null
+    },
+    {
+      "id": "e6faffd3b0bc1154e3b2eb3fcb175c24827c1132",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/server.py",
+      "relativePath": "demo-python-data-app/app/server.py",
+      "exportName": "serve",
+      "signature": "(port)",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [
+          {
+            "name": "port",
+            "type": "number",
+            "required": false,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "null",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-data-app/app/server.py",
+        "moduleName": "server",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "serve"
+      }
+    },
+    {
+      "id": "4cc944640a3587e21afc5aed1e05a0fe8c77b88b",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/calculator.py",
+      "relativePath": "demo-python-cli/src/calculator.py",
+      "exportName": "add",
+      "signature": "(a, b)",
+      "language": "python",
+      "runtime": "python",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "a",
+            "type": "number",
+            "required": true,
+            "description": "First value."
+          },
+          {
+            "name": "b",
+            "type": "number",
+            "required": true,
+            "description": "Second value."
+          }
+        ],
+        "output": {
+          "type": "number",
+          "description": "Sum of both values."
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/calculator.py",
+        "moduleName": "calculator",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "add"
+      }
+    },
+    {
+      "id": "3b9a37285eb08f686cc397f2d72d81fa23bc5a0a",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/calculator.py",
+      "relativePath": "demo-python-cli/src/calculator.py",
+      "exportName": "compound_interest",
+      "signature": "(principal, rate, years, contribution)",
+      "language": "python",
+      "runtime": "python",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "principal",
+            "type": "number",
+            "required": true,
+            "description": ""
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "required": true,
+            "description": ""
+          },
+          {
+            "name": "years",
+            "type": "number",
+            "required": true,
+            "description": ""
+          },
+          {
+            "name": "contribution",
+            "type": "number | null",
+            "required": false,
+            "description": ""
+          }
+        ],
+        "output": {
+          "type": "number",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/calculator.py",
+        "moduleName": "calculator",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "compound_interest"
+      }
+    },
+    {
+      "id": "264d515880b4eb8ffd48685e743771a4901b4a9e",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/cli.py",
+      "relativePath": "demo-python-cli/src/cli.py",
+      "type": "cli_command",
+      "exportName": "cli.py",
+      "signature": "[...args]",
+      "language": "python",
+      "runtime": "python_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/cli.py",
+        "command": "python3",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/cli.py"
+        ],
+        "callCommand": "python3 /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/cli.py",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "python_cli",
+        "executable": true,
+        "detectedAs": "python_main_guard"
+      }
+    },
+    {
+      "id": "2c30d90a0c39e982f81df0d0241929f8b03460ba",
+      "type": "python_function",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/cli.py",
+      "relativePath": "demo-python-cli/src/cli.py",
+      "exportName": "main",
+      "signature": "",
+      "language": "python",
+      "runtime": "python",
+      "callable": false,
+      "io": {
+        "inputs": [],
+        "output": {
+          "type": "null",
+          "description": ""
+        }
+      },
+      "execution": {
+        "kind": "python_import",
+        "modulePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/src/cli.py",
+        "moduleName": "cli",
+        "projectRoot": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "exportName": "main"
+      }
+    },
+    {
+      "id": "3235b766d28ce0bba7c4ac022e19d0db7f8de31a",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/build.bat",
+      "relativePath": "demo-python-cli/scripts/build.bat",
+      "type": "cli_command",
+      "exportName": "build.bat",
+      "signature": "[...args]",
+      "language": "batch",
+      "runtime": "cmd",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/build.bat",
+        "command": "cmd.exe",
+        "args": [
+          "/d",
+          "/s",
+          "/c",
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/build.bat"
+        ],
+        "callCommand": "cmd.exe /d /s /c /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/build.bat",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "win32",
+        "runtime": "cmd",
+        "executable": true
+      }
+    },
+    {
+      "id": "85d7625e37b7508480e3c03306c0ba1a352a4c0e",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/deploy.cmd",
+      "relativePath": "demo-python-cli/scripts/deploy.cmd",
+      "type": "cli_command",
+      "exportName": "deploy.cmd",
+      "signature": "[...args]",
+      "language": "batch",
+      "runtime": "cmd",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/deploy.cmd",
+        "command": "cmd.exe",
+        "args": [
+          "/d",
+          "/s",
+          "/c",
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/deploy.cmd"
+        ],
+        "callCommand": "cmd.exe /d /s /c /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/deploy.cmd",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "win32",
+        "runtime": "cmd",
+        "executable": true
+      }
+    },
+    {
+      "id": "f9b46194dfb950535c2674bb33874190a4925dd3",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/hello.sh",
+      "relativePath": "demo-python-cli/scripts/hello.sh",
+      "type": "cli_command",
+      "exportName": "hello.sh",
+      "signature": "[...args]",
+      "language": "shell",
+      "runtime": "shell",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Command-line arguments passed to the runnable.",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/hello.sh",
+        "command": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/hello.sh",
+        "args": [],
+        "callCommand": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/demo-python-cli/scripts/hello.sh",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "posix",
+        "runtime": "shell",
+        "executable": true,
+        "shebang": "/bin/sh"
+      }
+    },
+    {
+      "id": "ee00bf8b49cbf81a79f2c11ffd97610e1328ca73",
+      "filePath": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/bin/leumas-mesh.js",
+      "relativePath": "bin/leumas-mesh.js",
+      "type": "cli_command",
+      "exportName": "leumas-mesh.js",
+      "signature": "[...args]",
+      "language": "javascript",
+      "runtime": "node_cli",
+      "callable": true,
+      "io": {
+        "inputs": [
+          {
+            "name": "args",
+            "type": "array",
+            "required": false,
+            "description": "Arguments read from process.argv."
+          }
+        ],
+        "output": {
+          "type": "process_result",
+          "description": "Exit code, stdout, and stderr from the runnable process."
+        }
+      },
+      "execution": {
+        "kind": "cli",
+        "filePath": "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/bin/leumas-mesh.js",
+        "command": "node",
+        "args": [
+          "/mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/bin/leumas-mesh.js"
+        ],
+        "callCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/bin/leumas-mesh.js",
+        "cwd": "data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing",
+        "platform": "cross-platform",
+        "runtime": "node_cli",
+        "executable": true,
+        "parameters": [
+          {
+            "name": "args",
+            "kind": "argument",
+            "required": false,
+            "type": "array",
+            "description": "Arguments read from process.argv."
+          }
+        ],
+        "usageCommand": "node /mnt/d/leumas/tools/ollama-github-rag/data/repos/will-i-am-leumas-tech__Leumas-Function-Sharing/bin/leumas-mesh.js [<args>]",
+        "detectedAs": "shebang",
+        "shebang": "/usr/bin/env node"
+      }
+    }
+  ]
+}

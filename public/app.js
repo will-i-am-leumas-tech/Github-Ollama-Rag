@@ -91,6 +91,7 @@ async function renderRepoPage(owner, repo) {
       <div class="header-nav">
         <button id="homeBtn" class="btn">← Back</button>
         <div class="header-title" style="flex: 1;">${escapeHtml(owner)} / ${escapeHtml(repo)}</div>
+        <button id="functionIndexBtn" class="btn btn-primary">Index Functions</button>
         <div class="model-selectors" style="display: flex; gap: 8px; align-items: center;">
           <span class="subtle" style="font-size: 11px;">Model:</span>
           <select id="modelSelect" class="input" style="padding: 2px 4px; font-size: 12px; height: 24px; min-width: 120px;">
@@ -138,6 +139,21 @@ async function renderRepoPage(owner, repo) {
           </div>
         </div>
       </div>
+      <div id="functionPanel" class="function-panel">
+        <div class="panel-header">
+          <button id="functionPanelToggle" class="panel-title-btn" title="Toggle function index" aria-expanded="true">
+            <span id="functionPanelChevron" class="panel-chevron">▾</span>
+            <span>Function Index</span>
+            <span id="functionSummary" class="subtle"></span>
+          </button>
+          <div class="status-row">
+            <span id="functionIndexBadge" class="badge">Checking...</span>
+          </div>
+        </div>
+        <div id="functionList" class="function-list">
+          <div class="function-empty subtle"><span class="spinner"></span> Loading function index...</div>
+        </div>
+      </div>
     </div>
   `;
 
@@ -150,8 +166,16 @@ async function renderRepoPage(owner, repo) {
   const chatInput = document.getElementById('chatInput');
   const localBadge = document.getElementById('localBadge');
   const modelSelect = document.getElementById('modelSelect');
+  const functionIndexBtn = document.getElementById('functionIndexBtn');
+  const functionPanel = document.getElementById('functionPanel');
+  const functionPanelToggle = document.getElementById('functionPanelToggle');
+  const functionPanelChevron = document.getElementById('functionPanelChevron');
+  const functionList = document.getElementById('functionList');
+  const functionSummary = document.getElementById('functionSummary');
+  const functionIndexBadge = document.getElementById('functionIndexBadge');
 
   let selectedPath = '';
+  const functionPanelStorageKey = `functionPanelCollapsed:${owner}/${repo}`;
 
   // Load available models
   async function loadOllamaModels() {
@@ -173,6 +197,129 @@ async function renderRepoPage(owner, repo) {
   loadOllamaModels();
 
   homeBtn.onclick = () => { window.location.href = '/'; };
+
+  function setFunctionPanelCollapsed(collapsed) {
+    functionPanel.classList.toggle('collapsed', collapsed);
+    functionPanelToggle.setAttribute('aria-expanded', String(!collapsed));
+    functionPanelChevron.textContent = collapsed ? '▸' : '▾';
+    localStorage.setItem(functionPanelStorageKey, collapsed ? '1' : '0');
+  }
+
+  functionPanelToggle.onclick = () => {
+    setFunctionPanelCollapsed(!functionPanel.classList.contains('collapsed'));
+  };
+  setFunctionPanelCollapsed(localStorage.getItem(functionPanelStorageKey) === '1');
+
+  function renderFunctionState(message, options = {}) {
+    const showSpinner = options.spinner !== false;
+    const color = options.danger ? ' style="color: var(--danger);"' : '';
+    functionList.innerHTML = `
+      <div class="function-empty subtle"${color}>
+        ${showSpinner ? '<span class="spinner"></span>' : ''}
+        <span>${escapeHtml(message)}</span>
+      </div>
+    `;
+  }
+
+  function renderIoContract(io) {
+    if (!io) return '';
+    const inputs = Array.isArray(io.inputs) && io.inputs.length
+      ? io.inputs.map(input => `${escapeHtml(input.name || 'arg')}: ${escapeHtml(input.type || 'unknown')}`).join(', ')
+      : 'none';
+    const output = io.output?.type || 'unknown';
+    return `
+      <div class="function-contract">
+        <span>Inputs: ${inputs}</span>
+        <span>Output: ${escapeHtml(output)}</span>
+      </div>
+    `;
+  }
+
+  function renderFunctionIndex(data) {
+    const entries = Array.isArray(data.entries) ? data.entries : [];
+    const totals = data.summary?.totals || {};
+    const callableCount = totals.callable ?? entries.filter(entry => entry.callable).length;
+
+    functionSummary.textContent = entries.length
+      ? ` ${entries.length} found · ${callableCount} callable`
+      : '';
+    functionIndexBadge.textContent = data.indexed ? 'Indexed' : 'Not indexed';
+    if (data.source === 'archive') functionIndexBadge.textContent = 'Archived';
+
+    if (!data.indexed) {
+      renderFunctionState('No function index yet.');
+      return;
+    }
+
+    if (!entries.length) {
+      renderFunctionState('No functions found.', { spinner: false });
+      return;
+    }
+
+    functionList.innerHTML = entries
+      .slice()
+      .sort((a, b) => {
+        return String(a.relativePath || '').localeCompare(String(b.relativePath || ''))
+          || String(a.exportName || '').localeCompare(String(b.exportName || ''));
+      })
+      .map(entry => {
+        const signature = entry.signature || '';
+        const label = `${entry.exportName || '(anonymous)'}${signature}`;
+        const runtime = entry.language || entry.runtime || 'unknown';
+        const execution = entry.executionKind ? `<span class="badge">${escapeHtml(entry.executionKind)}</span>` : '';
+        return `
+          <div class="function-row">
+            <div class="function-main">
+              <div class="function-name">${escapeHtml(label)}</div>
+              <div class="function-path">${escapeHtml(entry.relativePath || '')}</div>
+              ${renderIoContract(entry.io)}
+            </div>
+            <div class="function-meta">
+              <span class="badge">${escapeHtml(entry.type || 'unknown')}</span>
+              <span class="badge">${escapeHtml(runtime)}</span>
+              ${execution}
+              ${entry.callable ? '<span class="badge callable">Callable</span>' : ''}
+            </div>
+          </div>
+        `;
+      })
+      .join('');
+  }
+
+  async function loadFunctionIndex() {
+    renderFunctionState('Loading function index...');
+    try {
+      const data = await api(`/api/repo/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/functions`);
+      renderFunctionIndex(data);
+    } catch (error) {
+      functionIndexBadge.textContent = 'Error';
+      renderFunctionState(`Error: ${error.message}`, { danger: true, spinner: false });
+    }
+  }
+
+  functionIndexBtn.onclick = async () => {
+    functionIndexBtn.disabled = true;
+    functionIndexBtn.textContent = 'Indexing...';
+    functionIndexBadge.textContent = 'Indexing...';
+    renderFunctionState('Indexing repository functions...');
+    try {
+      const data = await api(`/api/repo/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/functions/index`, {
+        method: 'POST',
+        body: JSON.stringify({})
+      });
+      renderFunctionIndex(data);
+      localBadge.textContent = 'Local ✅';
+      setupBtn.textContent = 'Re-index';
+      await refreshTree();
+    } catch (error) {
+      functionIndexBadge.textContent = 'Failed';
+      renderFunctionState(`Error: ${error.message}`, { danger: true, spinner: false });
+    } finally {
+      functionIndexBtn.disabled = false;
+      functionIndexBtn.textContent = 'Index Functions';
+    }
+  };
+
   async function refreshTree() {
     try {
       const data = await api(`/api/repo/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/tree`);
@@ -348,6 +495,7 @@ async function renderRepoPage(owner, repo) {
     localBadge.textContent = metaData.local ? 'Local ✅' : 'Preview 🌐';
     if (metaData.local) setupBtn.textContent = 'Re-index';
     await refreshTree();
+    await loadFunctionIndex();
   } catch (err) {
     app.innerHTML = `<div class="search-container"><h2 style="color:var(--danger)">Repo not found</h2><button class="btn" onclick="location.href='/'">Go Back</button></div>`;
   }
